@@ -1,0 +1,10 @@
+# client libraries
+openai
+azure-search-documents
+azure-ai-contentsafety
+promptflow
+promptflow-evals
+promptflow[azure]
+
+
+
