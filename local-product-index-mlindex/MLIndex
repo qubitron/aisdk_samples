@@ -1,0 +1,30 @@
+embeddings:
+  api_base: https://dantaylo-sdktest-aiservices.openai.azure.com
+  api_type: azure
+  api_version: 2023-07-01-preview
+  batch_size: '16'
+  connection:
+    id: /subscriptions/160d44f9-5018-4fb6-9bde-a24addc5a87b/resourceGroups/dantayl-sdktest-rg/providers/Microsoft.MachineLearningServices/workspaces/leb-build-explore/connections/aoai-connection
+  connection_type: workspace_connection
+  deployment: text-embedding-ada-002-2
+  dimension: null
+  endpoint: https://dantaylo-sdktest-aiservices.openai.azure.com/
+  kind: open_ai
+  model: text-embedding-ada-002
+  schema_version: '2'
+index:
+  api_version: 2023-07-01-preview
+  connection:
+    key: AZURE_AI_SEARCH_KEY
+  connection_type: environment
+  endpoint: https://dantaylo-sdktest-aisearch.search.windows.net
+  engine: azure-sdk
+  field_mapping:
+    content: content
+    filename: filepath
+    metadata: meta_json_string
+    title: title
+    url: url
+  index: local-product-index
+  kind: acs
+  semantic_configuration_name: azureml-default

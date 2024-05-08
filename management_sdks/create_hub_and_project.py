@@ -1,4 +1,4 @@
-from config import resource_group_name, hub_name, project_name, location, subscription_id, credential
+from common.config import resource_group_name, hub_name, project_name, location, subscription_id, credential
 
 # Create a resource group
 from azure.mgmt.resource import ResourceManagementClient

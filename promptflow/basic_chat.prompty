@@ -1,0 +1,35 @@
+---
+name: Chat Prompt
+description: A basic prompt that uses the chat API to answer questions
+model:
+    api: chat
+    configuration:
+        type: azure_openai
+        api_key: ${env:AZURE_OPENAI_API_KEY}
+        azure_endpoint: ${env:AZURE_OPENAI_ENDPOINT}
+        azure_deployment: gpt-4
+    parameters:
+        max_tokens: 256
+        temperature: 0.2
+        response_format:
+            type: json_object
+inputs:
+    question:
+        type: string
+
+outputs: 
+    answer:
+        type: string
+
+sample:
+    question: What is the meaning of life?
+
+---
+system:
+You are an AI assistant who helps people find information.
+As the assistant, you answer questions briefly, succinctly, 
+and in a personable manner using markdown and even add some personal flair with appropriate emojis.
+Respond with JSON format, like this: {"answer": the answer content}
+
+user: {question}
+

@@ -1,8 +1,9 @@
-from config import resource_group_name, aisearch_resource_name, location, subscription_id, credential
+from common.config import resource_group_name, aisearch_resource_name, location, subscription_id, credential
 
 from azure.mgmt.search import SearchManagementClient
 from azure.ai.ml import MLClient, ApiKeyConfiguration, AzureAISearchConnection
 
+# Create AI Search resource
 search_client = SearchManagementClient(
     credential=credential, subscription_id=subscription_id
 )
@@ -34,3 +35,5 @@ ml_client = MLClient(workspace_name=hub_name,
     credential=credential)
 
 ml_client.connections.create_or_update(aisearch_connection)
+
+

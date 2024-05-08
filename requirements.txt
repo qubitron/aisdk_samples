@@ -1,5 +1,16 @@
+# management libraries
 azure-ai-ml
 azure-mgmt-resource
 azure-mgmt-cognitiveservices
 azure-mgmt-search
 azure-identity
+promptflow[azure]
+
+# client libraries
+openai
+azure-search-documents
+azure-ai-contentsafety
+promptflow
+promptflow-evals
+
+
